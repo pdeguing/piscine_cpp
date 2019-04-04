@@ -1,22 +1,22 @@
-NAME	= hellomake
+NAME	= megaphone
 
 CC	= g++
 CFLAGS	= -Wall -Wextra -Werror
 
-IDIR	= ../include
+IDIR	= ../inc
 SDIR	= ./src
 ODIR	= ./src/obj
 LDIR	= ../lib
 
-LIBS	= -lm
+LIBS	=
 
-_DEPS	= header.hpp
+_DEPS	= 
 DEPS	= $(patsubst %, $(IDIR)/%, $(_DEPS))
 
-_SRC	= hellomake.cpp hellofunc.cpp
+_SRC	= megaphone.cpp
 SRC	= $(patsubst %, $(SDIR)/%, $(_SRC))
 
-_OBJ	= hellomake.o hellofunc.o
+_OBJ	= megaphone.o
 OBJ	= $(patsubst %, $(ODIR)/%, $(_OBJ))
 
 $(ODIR)/%.o: $(SRC) $(DEPS)
