@@ -2,17 +2,17 @@
  * File              : Contact.class.cpp
  * Author            : pdeguing <pdeguing@student.42.us.org>
  * Date              : 05.04.2019
- * Last Modified Date: 05.04.2019
+ * Last Modified Date: 06.04.2019
  * Last Modified By  : pdeguing <pdeguing@student.42.us.org>
  */
 
-#include <Contact.class.hpp>
+#include "Contact.class.hpp"
 
 Contact::Contact(void) {
 	return ;
 }
 
-Contact::Contact(void) {
+Contact::~Contact(void) {
 	return ;
 }
 
@@ -24,8 +24,8 @@ std::string	Contact::get_lastName(void) const {
 	return this->lastName;
 }
 
-std::string	Contact::get_nickName(void) const {
-	return this->nickName;
+std::string	Contact::get_nickname(void) const {
+	return this->nickname;
 }
 
 std::string	Contact::get_login(void) const {

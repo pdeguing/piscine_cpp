@@ -2,12 +2,14 @@
  * File              : Contact.class.hpp
  * Author            : pdeguing <pdeguing@student.42.us.org>
  * Date              : 05.04.2019
- * Last Modified Date: 05.04.2019
+ * Last Modified Date: 06.04.2019
  * Last Modified By  : pdeguing <pdeguing@student.42.us.org>
  */
 
-#ifndef CONTACT_CLASS_H
-# define CONTACT_CLASS_H
+#ifndef CONTACT_CLASS_HPP
+# define CONTACT_CLASS_HPP
+
+#include <iostream>
 
 class Contact {
 
@@ -35,6 +37,7 @@ class Contact {
 		std::string get_postalAddress(void) const;
 		std::string get_emailAddress(void) const;
 		std::string get_phoneNumber(void) const;
+		std::string get_birthday(void) const;
 		std::string get_favoriteMeal(void) const;
 		std::string get_underwearColor(void) const;
 		std::string get_darkestSecret(void) const;
@@ -46,6 +49,7 @@ class Contact {
 		void set_postalAddress(std::string str);
 		void set_emailAddress(std::string str);
 		void set_phoneNumber(std::string str);
+		void set_birthday(std::string str);
 		void set_favoriteMeal(std::string str);
 		void set_underwearColor(std::string str);
 		void set_darkestSecret(std::string str);

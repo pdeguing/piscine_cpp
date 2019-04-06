@@ -2,36 +2,21 @@ NAME	= phonebook
 
 CC	= g++
 CFLAGS	= -Wall -Wextra -Werror
+SRC	= Contact.class.cpp main.cpp
+OBJ	= $(SRC:.cpp=.o)
 
-IDIR	= ./inc
-SDIR	= ./src
-ODIR	= ./src/obj
-LDIR	= ./lib
+$(NAME):
+	@$(CC) $(CFLAGS) $(SRC) -o $@
 
-LIBS	= 
-
-_DEPS	= Contact.class.hpp
-DEPS	= $(patsubst %, $(IDIR)/%, $(_DEPS))
-
-_SRC	= main.cpp Contact.class.cpp
-SRC	= $(patsubst %, $(SDIR)/%, $(_SRC))
-
-_OBJ	= $(_SRC:.cpp=.o) 
-OBJ	= $(patsubst %, $(ODIR)/%, $(_OBJ))
-
-$(OBJ): $(SRC)
-	$(CC) -c $< $(DEPS) $(CFLAGS)
-
-$(NAME): $(OBJ)
-	$(CC) -o $@ $^ $(CFLAGS) $(LIBS)
-
+all: $(NAME)
 
 clean:
-	rm -f $(ODIR)/*.o
+	@/bin/rm -f $(OBJ)
 
 fclean: clean
-	rm -f $(NAME)
+	@/bin/rm -f $(NAME)
 
 re: fclean all
+
 
 .PHONY: clean fclean all re
