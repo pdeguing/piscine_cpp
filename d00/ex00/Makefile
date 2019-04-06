@@ -2,36 +2,20 @@ NAME	= megaphone
 
 CC	= g++
 CFLAGS	= -Wall -Wextra -Werror
+SRC	= megaphone.cpp
+OBJ	= $(SRC:.cpp=.o)
 
-IDIR	= ../inc
-SDIR	= ./src
-ODIR	= ./src/obj
-LDIR	= ../lib
+$(NAME):
+	@$(CC) $(CFLAGS) $(SRC) -o $@
 
-LIBS	=
-
-_DEPS	= 
-DEPS	= $(patsubst %, $(IDIR)/%, $(_DEPS))
-
-_SRC	= megaphone.cpp
-SRC	= $(patsubst %, $(SDIR)/%, $(_SRC))
-
-_OBJ	= megaphone.o
-OBJ	= $(patsubst %, $(ODIR)/%, $(_OBJ))
-
-$(ODIR)/%.o: $(SRC) $(DEPS)
-	$(CC) -c -o $@ $< $(CFLAGS)
-
-$(NAME): $(OBJ)
-	$(CC) -o $@ $^ $(CFLAGS) $(LIBS)
-
+all: $(NAME)
 
 clean:
-	rm -f $(ODIR)/*.o
+	@/bin/rm -f $(OBJ)
 
 fclean: clean
-	rm -f $(NAME)
+	@/bin/rm -f $(NAME)
 
 re: fclean all
 
-.PHONY: clean fclean all re
+.PHONY: clean fclean all
