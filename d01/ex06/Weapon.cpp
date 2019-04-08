@@ -8,7 +8,7 @@
 
 #include "Weapon.hpp"
 
-Weapon::Weapon(void) {}
+Weapon::Weapon(std::string t) : _type(t) {}
 
 Weapon::~Weapon(void) {}
 
