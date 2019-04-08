@@ -8,26 +8,36 @@
 
 #include "ZombieEvent.hpp"
 
-Zombie::Zombie(void) {
+ZombieEvent::ZombieEvent(void) {
 	return ;
 }
 
-Zombie::~Zombie(void) {
+ZombieEvent::~ZombieEvent(void) {
 	return ;
 }
 
-void	Zombie::setZombieType(std::string type) {
+void	ZombieEvent::setZombieType(std::string type) {
 	this->_type = type;
 	return ;
 }
 
-Zombie	*Zombie::newZombie(std::string name) {
+Zombie	*ZombieEvent::newZombie(std::string name) {
 	Zombie	*nz;
 
 	nz = new Zombie(name, this->_type);
 	return nz;
 }
 
-void	randomChump(void) {
-	Zombie	randomZombie;
+void	ZombieEvent::randomChump(void) {
+	std::string	rand_name;
+	std::string	rand_alpha = "abcdefghijklmnopqrstuvwxyz";
+	Zombie		*z;
+
+	for (int i = 0; i < 7; i++) {
+		rand_name += rand_alpha[rand() % 26];
+	}
+	z = this->newZombie(rand_name);
+	z->announce();
+	delete z;
+	return ;
 }

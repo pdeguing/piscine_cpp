@@ -7,11 +7,20 @@
  */
 
 #include "Zombie.hpp"
+#include "ZombieEvent.hpp"
 
 int	main(void) {
-	Zombie	*bill = new Zombie("Bill", "Programmer");
+	Zombie		bill = Zombie("bill", "programmer");
+	Zombie		*jo;
+	ZombieEvent	ze = ZombieEvent();
 
-	bill->announce();
-	delete bill;
+	bill.announce();
+	ze.setZombieType("surfer");
+	jo = ze.newZombie("jo");
+	jo->announce();
+	delete jo;
+	ze.randomChump();
+	ze.randomChump();
+	ze.randomChump();
 	return 0;
 }
