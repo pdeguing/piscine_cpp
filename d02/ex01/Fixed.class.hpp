@@ -10,6 +10,7 @@
 # define FIXED_CLASS_HPP
 
 #include <iostream>
+#include <math.h>
 
 class	Fixed {
 
