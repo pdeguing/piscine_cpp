@@ -31,27 +31,32 @@ ScavTrap::ScavTrap(std::string const name) : _name(name),
 						_meleeAttackDamage(20),
 						_rangedAttackDamage(15),
 						_armorDamageReduction(3) {
-	std::cout << "Can I shoot something now? Or climd some stairs? \
-		SOMETHING exciting?" << std::endl;
+	std::cout << "Can I shoot something now? Or climd some stairs? SOMETHING exciting?"
+		<< std::endl;
 	srand(time(NULL));
 	return ;
 }
 
 ScavTrap::ScavTrap(ScavTrap const & other) {
-	std::cout << "This time it'll be awesome, I promise!" << std::endl;
+	std::cout << "Does this mean I can start dancing? Pleeeeeeaaaaase?"
+		<< std::endl;
 	srand(time(NULL));
 	*this = other;
 	return ;
 }
 
 ScavTrap::~ScavTrap( void) {
-	std::cout << "I'll stop talking when I'm dea................. *SILENCE*"
+	std::cout << "Oh. My. God. What if I'm like... a fish? And, if I'm not"
+		<< " moving... I stop breathing? AND THEN I'LL DIE! HELP ME! HELP"
+		<< " MEEEEE HEE HEE HEEE! HHHHHHHELP"
 		<< std::endl;
 	return ;
 }
 
 ScavTrap &	ScavTrap::operator=(ScavTrap const & tmp) {
-	std::cout << "Equalizing with <" << tmp.getName() << "> ..." << std::endl;
+	std::cout << "I feel like an idiot now. <"
+		<< this->_name << "> has been assigned to <"
+		<< tmp.getName() << "> ..." << std::endl;
 
 	if (this == &tmp)
 		return *this;
@@ -69,7 +74,7 @@ ScavTrap &	ScavTrap::operator=(ScavTrap const & tmp) {
 }
 
 void	ScavTrap::rangedAttack(std::string const & target) {
-	std::cout << "Crazy young whippersnappers... <" << this->_name
+	std::cout << "I'm a tornado of death and bullets! <" << this->_name
 		<< "> attacks <" << target
 		<< "> at range, causing <"
 		<< this->_rangedAttackDamage
@@ -78,8 +83,8 @@ void	ScavTrap::rangedAttack(std::string const & target) {
 }
 
 void	ScavTrap::meleeAttack(std::string const & target) {
-	std::cout << "Guess who? <" << this->_name << "> punches <"
-		<< target <<"> in the face, causing <"
+	std::cout << "Ready for the PUNCHline? <" << this->_name << "> punches <"
+		<< target << "> in the face, causing <"
 		<< this->_meleeAttackDamage
 		<< "> damage!" << std::endl;
 	return ;
@@ -92,7 +97,7 @@ void	ScavTrap::takeDamage(unsigned int amount) {
 		damage = 0;
 	else
 		damage = amount - this->_armorDamageReduction;
-	std::cout << "Woah! Oh! Jeez! <" << this->_name
+	std::cout << "This could've gone better! <" << this->_name
 		<< "> took <" << damage << "> damage!" << std::endl;
 	if (damage >= this->_hitPoints) {
 		this->_hitPoints = 0;
@@ -107,14 +112,39 @@ void	ScavTrap::beRepaired(unsigned int amount) {
 	if (this->_maxHitPoints <= this->_hitPoints + amount) {
 		amount = this->_maxHitPoints - this->_hitPoints;
 	}
-	std::cout << "Sweet life juice! <" << this->_name
+	std::cout << "Wow, that actually worked? <" << this->_name
 		<< "> has been repaired! (+"
 		<< amount << ")" << std::endl;
 	this->_hitPoints += amount;
 	return ;
 }
 
-void	ScavTrap::challengeNewcomer(void) const {
+void	ScavTrap::challengeNewcomer(std::string const target) const {
+	int	r;
+
+	r = rand() % 3;
+	switch (r) {
+
+		case 0:
+			std::cout << "Hey <" << target
+				<< ">! Dance battle! Or, you know... regular"
+				<< " battle." << std::endl;
+			break ;
+
+		case 1:
+			std::cout << "You know what <"
+				<< target
+				<< ">? Why don't you play with your eyes closed?"
+				<< std::endl;
+			break ;
+
+		case 2:
+			std::cout << "They say I should challenge you. But <"
+				<< target
+				<< ">, being you must already be such a challenge..."
+				<< std::endl;
+			break ;
+	}
 	return ;
 }
 

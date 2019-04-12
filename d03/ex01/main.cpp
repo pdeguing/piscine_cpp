@@ -7,24 +7,26 @@
  */
 
 #include "FragTrap.hpp"
+#include "ScavTrap.hpp"
 
 int	main() {
-	FragTrap	a;
+	ScavTrap	a;
 	FragTrap	b("BizTrap");
-	FragTrap	c("CurlyTrap");
+	ScavTrap	c("CurlyTrap");
 	FragTrap	d("MarvTrap");
 
-	a = d;
+	a = c;
 	d.vaulthunter_dot_exe("CurlyTrap");
 	a.meleeAttack("BizTrap");
 	b.takeDamage(30);
 	d.vaulthunter_dot_exe("CurlyTrap");
 	c.rangedAttack("BizTrap");
+	c.challengeNewcomer("BizTrap");
 	b.takeDamage(20);
 	d.vaulthunter_dot_exe("CurlyTrap");
 	d.vaulthunter_dot_exe("CurlyTrap");
-	d.vaulthunter_dot_exe("CurlyTrap");
 	b.beRepaired(50);
+	c.challengeNewcomer("MarvTrap");
 
 	return 0;
 }

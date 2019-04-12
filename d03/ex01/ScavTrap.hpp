@@ -6,8 +6,8 @@
  * Last Modified By  : pdeguing <pdeguing@student.42.us.org>
  */
 
-#ifndef FRAGTRAP_H
-# define FRAGTRAP_H
+#ifndef SCAVTRAP_H
+# define SCAVTRAP_H
 
 #include <time.h>
 #include <iostream>
@@ -26,7 +26,7 @@ class	ScavTrap {
 		void	takeDamage(unsigned int amount);
 		void	beRepaired(unsigned int amount);
 
-		void	challengeNewcomer(void) const;
+		void	challengeNewcomer(std::string const target) const;
 
 		std::string	getName(void) const;
 		unsigned int	getHitPoints(void) const;
