@@ -1,4 +1,4 @@
-NAME	= claptrap
+NAME	= ninjatrap
 
 CC	= g++
 CFLAGS	= -Wall -Wextra -Werror

@@ -8,6 +8,7 @@
 
 #include "FragTrap.hpp"
 #include "ScavTrap.hpp"
+#include "NinjaTrap.hpp"
 
 int	main() {
 	ClapTrap	a;
@@ -15,6 +16,7 @@ int	main() {
 	ScavTrap	c("CurlyTrap");
 	FragTrap	d("MarvTrap");
 	ClapTrap	e("HellTrap");
+	NinjaTrap	f("PlatoTrap");
 
 	a = b;
 	a.meleeAttack("BizTrap");
@@ -24,6 +26,10 @@ int	main() {
 	e.takeDamage(20);
 	e.beRepaired(50);
 	c.challengeNewcomer("MarvTrap");
+	f.ninjaShoebox(b);
+	f.ninjaShoebox(f);
+	f.ninjaShoebox(e);
+	f.ninjaShoebox(c);
 
 	return 0;
 }
