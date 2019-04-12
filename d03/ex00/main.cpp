@@ -17,17 +17,14 @@ int	main() {
 	a = d;
 	d.vaulthunter_dot_exe("CurlyTrap");
 	a.meleeAttack("BizTrap");
-	d.vaulthunter_dot_exe("CurlyTrap");
-	d.vaulthunter_dot_exe("CurlyTrap");
 	b.takeDamage(30);
 	d.vaulthunter_dot_exe("CurlyTrap");
 	c.rangedAttack("BizTrap");
-	d.vaulthunter_dot_exe("CurlyTrap");
 	b.takeDamage(20);
 	d.vaulthunter_dot_exe("CurlyTrap");
 	d.vaulthunter_dot_exe("CurlyTrap");
-	b.beRepaired(50);
 	d.vaulthunter_dot_exe("CurlyTrap");
+	b.beRepaired(50);
 
 	return 0;
 }

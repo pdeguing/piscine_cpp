@@ -19,7 +19,7 @@ class	FragTrap {
 		FragTrap(const FragTrap& other);
 		~FragTrap(void);
 
-		FragTrap &	operator=(FragTrap tmp);
+		FragTrap &	operator=(FragTrap const & tmp);
 
 		void	rangedAttack(std::string const & target);
 		void	meleeAttack(std::string const & target);
@@ -29,28 +29,28 @@ class	FragTrap {
 		void	vaulthunter_dot_exe(std::string const & target);
 
 		std::string	getName(void) const;
-		int		getHitPoints(void) const;
-		int		getMaxHitPoints(void) const;
-		int		getEnergyPoints(void) const;
-		int		getMaxEnergyPoints(void) const;
-		int		getLevel(void) const;
-		int		getMeleeAttackDamage(void) const;
-		int		getRangedAttackDamage(void) const;
-		int		getArmorDamageReduction(void) const;
+		unsigned int	getHitPoints(void) const;
+		unsigned int	getMaxHitPoints(void) const;
+		unsigned int	getEnergyPoints(void) const;
+		unsigned int	getMaxEnergyPoints(void) const;
+		unsigned int	getLevel(void) const;
+		unsigned int	getMeleeAttackDamage(void) const;
+		unsigned int	getRangedAttackDamage(void) const;
+		unsigned int	getArmorDamageReduction(void) const;
 
 
 	private:
 		std::string	_name;
 
-		int	_hitPoints;
-		int	_maxHitPoints;
-		int	_energyPoints;
-		int	_maxEnergyPoints;
-		int	_level;
+		unsigned int	_hitPoints;
+		unsigned int	_maxHitPoints;
+		unsigned int	_energyPoints;
+		unsigned int	_maxEnergyPoints;
+		unsigned int	_level;
 
-		int	_meleeAttackDamage;
-		int	_rangedAttackDamage;
-		int	_armorDamageReduction;
+		unsigned int	_meleeAttackDamage;
+		unsigned int	_rangedAttackDamage;
+		unsigned int	_armorDamageReduction;
 };
 
 #endif
