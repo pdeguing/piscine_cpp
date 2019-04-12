@@ -1,4 +1,4 @@
-NAME	= fixed
+NAME	= fragtrap
 
 CC	= g++
 CFLAGS	= -Wall -Wextra -Werror
