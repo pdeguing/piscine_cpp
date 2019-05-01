@@ -10,6 +10,7 @@
 # define SORCERER_CLASS_HPP
 
 #include <iostream>
+#include "Victim.class.hpp"
 
 class	Sorcerer {
 
@@ -20,6 +21,8 @@ class	Sorcerer {
 		~Sorcerer(void);
 
 		Sorcerer &	operator=(Sorcerer const & tmp);
+
+		void		polymorph(Victim const & v) const;
 
 		std::string	getName(void) const;
 		std::string	getTitle(void) const;

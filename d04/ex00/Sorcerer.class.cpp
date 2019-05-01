@@ -46,6 +46,11 @@ std::ostream &	operator<<(std::ostream & ofs, const Sorcerer & s) {
 	return ofs;
 }
 
+void		Sorcerer::polymorph(Victim const & v) const {
+	v.getPolymorphed();
+	return ;
+}
+
 std::string	Sorcerer::getName() const {
 	return this->_name;
 }

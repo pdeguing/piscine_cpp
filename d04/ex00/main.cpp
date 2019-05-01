@@ -10,8 +10,11 @@
 
 int	main() {
 	Sorcerer	gandalf("Gandalf", "The White");
+	Victim		sarouman("Sarouman");
 
-	std::cout << gandalf;
+	std::cout << gandalf << sarouman;
+
+	gandalf.polymorph(sarouman);
 
 	return 0;
 }
