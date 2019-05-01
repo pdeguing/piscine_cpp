@@ -17,16 +17,16 @@ class Victim {
 
 		Victim(Victim const & other);
 		Victim(std::string const name);
-		~Victim(void);
+		virtual ~Victim(void);
 
 		Victim &	operator=(Victim const & tmp);
 
-		void		getPolymorphed(void) const;
+		virtual void		getPolymorphed(void) const;
 
 		std::string	getName(void) const;
 
 
-	private:
+	protected:
 
 		Victim(void);
 

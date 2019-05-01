@@ -10,14 +10,17 @@
 # define PEON_CLASS_HPP
 
 #include <iostream>
+#include "Victim.class.hpp"
 
 class Peon : public Victim {
 
 	public:
 
 		Peon(std::string const name);
-		Peon(Peon & src);
-		~Peon(void);
+		Peon(Peon const & other);
+		virtual ~Peon(void);
+
+		void	getPolymorphed(void) const;
 };
 
 #endif

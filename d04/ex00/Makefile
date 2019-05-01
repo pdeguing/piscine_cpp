@@ -1,6 +1,6 @@
 NAME	= sheep
 
-CC	= g++
+CC	= clang++
 CFLAGS	= -Wall -Wextra -Werror
 SRC	= *.cpp
 OBJ	= $(SRC:.cpp=.o)
