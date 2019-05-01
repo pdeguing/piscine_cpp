@@ -20,7 +20,7 @@ class Peon : public Victim {
 		Peon(Peon const & other);
 		virtual ~Peon(void);
 
-		void	getPolymorphed(void) const;
+		virtual void	getPolymorphed(void) const;
 };
 
 #endif

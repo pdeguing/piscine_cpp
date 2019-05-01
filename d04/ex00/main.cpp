@@ -15,15 +15,15 @@ int	main() {
 	Victim		jim("Jimmy");
 //	Victim		jim2(jim);
 	Peon		joe("Joe");
-//	Peon		joe2(joe);
+	Victim		*p = new Peon("Kabou");
 
-	std::cout << robert << jim << joe;
+	std::cout << robert << jim << joe << *p;
 
 	robert.polymorph(jim);
 	robert.polymorph(joe);
 
 //	robert.polymorph(jim2);
-//	robert.polymorph(joe2);
+	robert.polymorph(*p);
 
 	return 0;
 }
