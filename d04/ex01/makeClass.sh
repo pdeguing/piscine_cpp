@@ -38,7 +38,7 @@ function do_header
     fi
 
     echo >> $header_path;
-    echo "#endif //${header_guard}" >> $header_path;
+    echo "#endif // ${header_guard}" >> $header_path;
 }
 
 function do_source
@@ -66,7 +66,7 @@ function do_source
     echo "${indent}}" >> $source_path;
     echo >> $source_path;
     echo "${indent}${name}::${name}(${name} const & src) {" >> $source_path;
-    echo "${indent}	*this = other;" >> $source_path;
+    echo "${indent}	*this = src;" >> $source_path;
     echo "${indent}	return ;" >> $source_path;
     echo "${indent}}" >> $source_path;
     echo >> $source_path;
@@ -84,8 +84,6 @@ function do_source
     if [ x$namespace != x ]; then
         echo "}" >> $source_path;
     fi
-
-    echo >> $source_path;
 }
 
 if [ x$1 = x ]; then

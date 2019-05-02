@@ -13,11 +13,11 @@ Enemy::Enemy(void) {
 }
 
 Enemy::Enemy(Enemy const & src) {
-	*this = other;
+	*this = src;
 	return ;
 }
 
-Enemy::Enemy(int hp, std::string const & type) : _hp(hp), _type(type) {
+Enemy::Enemy(int hp, std::string const & type) : _type(type), _hp(hp) {
 	return ;
 }
 
@@ -36,7 +36,7 @@ Enemy &	Enemy::operator=(Enemy const & tmp) {
 void	Enemy::takeDamage(int d) {
 	if (d <= 0)
 		return ;
-	if (this->_hp > n)
+	if (this->_hp > d)
 		this->_hp -= d;
 	else
 		this->_hp = 0;

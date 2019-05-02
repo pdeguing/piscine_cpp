@@ -13,7 +13,7 @@ AWeapon::AWeapon(void) {
 }
 
 AWeapon::AWeapon(AWeapon const & src) {
-	*this = other;
+	*this = src;
 	return ;
 }
 
@@ -35,7 +35,7 @@ AWeapon::~AWeapon(void) {
 	return ;
 }
 
-std::string const	getName(void) const {
+std::string const	AWeapon::getName(void) const {
 	return this->_name;
 }
 

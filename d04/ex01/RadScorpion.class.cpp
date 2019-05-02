@@ -1,24 +1,23 @@
 /**
- * File              : PowerFist.class.cpp
+ * File              : RadScorpion.class.cpp
  * Author            : pdeguing <pdeguing@student.42.us.org>
  * Date              : 02.05.2019
  * Last Modified Date: 02.05.2019
  * Last Modified By  : pdeguing <pdeguing@student.42.us.org>
  */
 
-#include "PowerFist.class.hpp"
+#include "RadScorpion.class.hpp"
 
-PowerFist::PowerFist(void) : AWeapon("Power Fist", 8, 50) {
-	return ;
-}
-
-PowerFist::~PowerFist(void) {
-	return ;
-}
-
-void	PowerFist::attack(void) const {
+RadScorpion::RadScorpion(void) : Enemy(80, "RadScorpion") {
 	std::cout
-		<< "* pschhh... SBAM! *"
+		<< "* click click click *"
+		<< std::endl;
+	return ;
+}
+
+RadScorpion::~RadScorpion(void) {
+	std::cout
+		<< "* SPROTCH *"
 		<< std::endl;
 	return ;
 }

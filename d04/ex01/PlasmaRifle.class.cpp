@@ -18,7 +18,7 @@ PlasmaRifle::~PlasmaRifle(void) {
 
 void	PlasmaRifle::attack(void) const {
 	std::cout
-		<< "* piouuu piouuu piouuu *
+		<< "* piouuu piouuu piouuu *"
 		<< std::endl;
 	return ;
 }

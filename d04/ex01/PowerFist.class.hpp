@@ -9,6 +9,9 @@
 #ifndef POWERFIST_CLASS_HPP
 # define POWERFIST_CLASS_HPP
 
+#include <iostream>
+#include "AWeapon.class.hpp"
+
 class PowerFist : public AWeapon {
 
 	public:

@@ -20,7 +20,7 @@ class AWeapon {
 		AWeapon(std::string const & name, int apcost, int damage);
 		virtual	~AWeapon(void);
 
-		AWeapon &		operator=(AWeapon cont &tmp);
+		AWeapon &		operator=(AWeapon const &tmp);
 
 		std::string const	getName(void) const;
 
@@ -32,8 +32,8 @@ class AWeapon {
 	private:
 		
 		std::string		_name;
-		int			_damage;
 		int			_apcost;
+		int			_damage;
 };
 
 #endif //AWEAPON_CLASS_HPP

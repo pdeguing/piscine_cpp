@@ -9,6 +9,9 @@
 #ifndef PLASMARIFLE_CLASS_HPP
 # define PLASMARIFLE_CLASS_HPP
 
+#include <iostream>
+#include "AWeapon.class.hpp"
+
 class PlasmaRifle : public AWeapon {
 
 	public:
